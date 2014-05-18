@@ -51,23 +51,7 @@ public class GameManagerCustom : MonoBehaviour
 
 		void NextLevel (string level)
 		{
-				if (m_backgroundToFadeOut != null) {
-						Material m = m_backgroundToFadeOut.renderer.material;
-			
-						if (m != null) {															//Cool, we have a material. Use our Scripts/Helpers/Texture_Extensions to fade
-								StartCoroutine (m.FadeMaterialAlpha (m_fadeAlphaTo, m_fadeAlphaFrom, 0, m_fadeDuration, () => {
-										Application.LoadLevel (level);									//Once the fade is finished, do this thing
-								}));
-				
-						} else {
-								Application.LoadLevel (level);					
-						}
-				} else {
-			
-						if (m_autoLaunchNextLevel) {
-								Application.LoadLevel (level);									
-						}
-				}
+				Application.LoadLevel (level);							//You need to add both the StartUpScene and the first level to the Build Settings or you'll get an error here...
 		}
 
 		void DoSomething ()
