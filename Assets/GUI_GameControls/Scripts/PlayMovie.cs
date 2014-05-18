@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayMovie : MonoBehaviour
 {
-
+	#if UNITY_STANDALONE
 		public MovieTexture m_movie;
 		public bool			m_loopMovie = true;
 		public float 		m_delayBeforePlaying = 0;
@@ -42,4 +42,5 @@ public class PlayMovie : MonoBehaviour
 				if (m_movie != null)
 						m_movie.Stop ();								//If we are turning this game object on or off, let's rewind when turned off
 		}
+#endif
 }

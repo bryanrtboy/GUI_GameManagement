@@ -4,6 +4,8 @@ using System.Collections;
 public class GUIWebCamRenderer : MonoBehaviour
 {
 
+#if UNITY_EDITOR || UNITY_WEBPLAYER
+
 		private WebCamTexture webcamTexture;
 
 		// Use this for initialization
@@ -15,10 +17,5 @@ public class GUIWebCamRenderer : MonoBehaviour
 	
 		}
 	
-		// Update is called once per frame
-		void Update ()
-		{
-
-	
-		}
+#endif
 }
