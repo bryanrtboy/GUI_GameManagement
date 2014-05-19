@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GUI_GameControls/Scripts/PlayMovie.cs">
     <Files>
-      <File FileName="Assets/GUI_GameControls/Scripts/GUIWebCamRenderer.cs" Line="10" Column="16" />
-      <File FileName="Assets/GUI_GameControls/Scripts/PlayMovie.cs" Line="46" Column="7" />
+      <File FileName="Assets/GUI_GameControls/Scripts/GUIWebCamRenderer.cs" Line="1" Column="1" />
+      <File FileName="Assets/GUI_GameControls/Scripts/PlayMovie.cs" Line="46" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
