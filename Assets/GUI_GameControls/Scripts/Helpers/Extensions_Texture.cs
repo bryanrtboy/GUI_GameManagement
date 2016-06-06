@@ -24,40 +24,60 @@ using System.Collections;
 
 public static class Extensions_Texture
 {
-
-		public static IEnumerator FadeGUITexture (this GUITexture myGUItexture, float startLevel, float endLevel, float delay, float duration, Action onComplete)
-		{
-				yield return new WaitForSeconds (delay);
+	
+	public static IEnumerator FadeGUITexture (this GUITexture m_GUITexture, float startLevel, float endLevel, float delay, float duration, Action onComplete)
+	{
+		yield return new WaitForSeconds (delay);
 		
-				float speed = 1.0f / duration;   
+		float speed = 1.0f / duration;   
 		
-				for (float t = 0.0f; t < 1.0f; t += Time.deltaTime * speed) {
+		for (float t = 0.0f; t < 1.0f; t += Time.deltaTime * speed) {
 			
-						float f = Mathf.Lerp (startLevel, endLevel, t);
-						myGUItexture.color = new Color (myGUItexture.color.r, myGUItexture.color.g, myGUItexture.color.b, f);
-						yield return null;
+			float f = Mathf.Lerp (startLevel, endLevel, t);
+			m_GUITexture.color = new Color (m_GUITexture.color.r, m_GUITexture.color.g, m_GUITexture.color.b, f);
+			yield return null;
 			
-				}
-
-				onComplete ();
-		
 		}
-
-		public static IEnumerator FadeMaterialAlpha (this Material materialToFade, float startLevel, float endLevel, float delay, float duration, Action onComplete)
-		{
-				yield return new WaitForSeconds (delay);
 		
-				float speed = 1.0f / duration;   
-
-				for (float t = 0.0f; t < 1.0f; t += Time.deltaTime * speed) {
-			
-						float f = Mathf.Lerp (startLevel, endLevel, t);
-						materialToFade.color = new Color (materialToFade.color.r, materialToFade.color.g, materialToFade.color.b, f);
-						yield return null;
-			
-				}
-
-				onComplete ();
+		onComplete ();
 		
+	}
+	
+	public static IEnumerator FadeMaterialAlpha (this Material materialToFade, float startLevel, float endLevel, float delay, float duration, Action onComplete)
+	{
+		yield return new WaitForSeconds (delay);
+		
+		float speed = 1.0f / duration;   
+		
+		for (float t = 0.0f; t < 1.0f; t += Time.deltaTime * speed) {
+			
+			float f = Mathf.Lerp (startLevel, endLevel, t);
+			materialToFade.color = new Color (materialToFade.color.r, materialToFade.color.g, materialToFade.color.b, f);
+			yield return null;
+			
 		}
+		
+		onComplete ();
+		
+	}
+	
+	public static IEnumerator FadeMaterialToColor (this Material materialToFade, Color fromColor, Color toColor, float delay, float duration, Action onComplete)
+	{
+		yield return new WaitForSeconds (delay);
+		
+		float speed = 1.0f / duration;   
+		
+		for (float t = 0.0f; t < 1.0f; t += Time.deltaTime * speed) {
+			
+			Color c = Color.Lerp (fromColor, toColor, t);
+			materialToFade.color = c;
+			
+			yield return null;
+			
+		}
+		
+		onComplete ();
+		
+	}
+	
 }

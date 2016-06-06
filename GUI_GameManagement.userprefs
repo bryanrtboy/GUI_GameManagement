@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GUI_GameControls/Scripts/PlayMovie.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../SerialUSBProject/Assets/USBSerialPort/Scripts/SerialPortReader.cs">
     <Files>
-      <File FileName="Assets/GUI_GameControls/Scripts/GUIWebCamRenderer.cs" Line="1" Column="1" />
-      <File FileName="Assets/GUI_GameControls/Scripts/PlayMovie.cs" Line="46" Column="1" />
+      <File FileName="../SerialUSBProject/Assets/Uniduino/Scripts/Arduino.Firmata.cs" Line="132" Column="1" />
+      <File FileName="../SerialUSBProject/Assets/USBSerialPort/Scripts/SerialPortReader.cs" Line="26" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
